@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NavigationDrawerTemplate</string>
+    <string name="tmp">Hello World!</string>
 </resources>
