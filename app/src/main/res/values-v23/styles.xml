@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Style for API23:-->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+        <!--Set the status bar transparent for API21+ to get the "Drawer-Under-The-Status-Bar" effect!-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

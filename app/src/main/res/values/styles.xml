@@ -1,11 +1,25 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!--Base application theme-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Theme for unspecified API levels-->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+
+    <!--Theme for ToolBar/AppBar-->
+    <style name="AppTheme.ToolBar" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorSecondary">@color/colorIcons</item>
+    </style>
+
+    <!--Theme for ToolBar/AppBar OverFlow menu-->
+    <style name="AppTheme.ToolBar.OverFlow" parent="ThemeOverlay.AppCompat.Light">
+
     </style>
 
 </resources>
