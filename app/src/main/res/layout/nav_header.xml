@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryLight" >
+
+    <!--
+        This is the layout for the NavigationView Header.
+            - Select an appropriate layout_height & background image
+            - Design as needed.
+             NOTE: For CircleImageView, checkout: http://www.android4devs.com/2015/06/navigation-view-material-design-support.html
+    -->
+
+    <TextView
+        android:id="@+id/nav_header_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>
