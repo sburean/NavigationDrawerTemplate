@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryLight" >
+    android:background="@color/colorPrimaryLight">
 
     <!--
         This is the layout for the NavigationView Header.
@@ -15,8 +15,12 @@
     <TextView
         android:id="@+id/nav_header_textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp" />
 
 </LinearLayout>
