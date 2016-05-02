@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!--Add the menu items for the toolbar here with the item attributes-->
+    <item
+        android:id="@+id/toolbar_item_1"
+        android:title="item_1"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
+        <!--android:icon=""-->
+
+    <item
+        android:id="@+id/toolbar_item_2"
+        android:title="item_2"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"/>
+    <!--android:icon=""-->
+
+</menu>
