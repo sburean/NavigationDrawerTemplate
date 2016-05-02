@@ -14,7 +14,7 @@
         android:id="@+id/toolbar_item_2"
         android:title="item_2"
         android:orderInCategory="200"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <!--android:icon=""-->
 
 </menu>
