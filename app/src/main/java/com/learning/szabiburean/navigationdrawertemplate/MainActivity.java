@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_menu_item2:
                         Toast.makeText(MainActivity.this, "Clicked menu item 2", Toast.LENGTH_SHORT).show();
                         break;
+                    case R.id.nav_sub_menu_item_1:
+                        Toast.makeText(MainActivity.this, "Clicked sub menu item 1", Toast.LENGTH_SHORT).show();
+                        break;
+
                     //---------tmp-------------
 
                     default:

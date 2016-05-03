@@ -23,4 +23,20 @@
 
     </group>
 
+    <item android:title="Sub Items">
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <!--Place sub-items here:-->
+                <item
+                    android:id="@+id/nav_sub_menu_item_1"
+                    android:checked="false"
+                    android:title="tmp_sub_item_1" />
+
+            </group>
+
+        </menu>
+    </item>
+
 </menu>
