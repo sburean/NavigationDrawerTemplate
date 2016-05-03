@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
          * Simply call the methods (with informative named) here.
          */
 
+        initToolbar();
+        initViews(savedInstanceState);
+    }
+
+    private void initToolbar(){
         //Initialize toolbar and assign it to the activity:
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
         //Initialize the "home" button -> to be converted into a "hamburger" icon
         assert getSupportActionBar() != null : getSupportActionBar();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+    }
 
+    private void initViews(Bundle savedInstanceState){
         //Initialize the navigationView:
         navView = (NavigationView) findViewById(R.id.navView);
 
@@ -73,14 +80,13 @@ public class MainActivity extends AppCompatActivity {
             //previous state was restored; correctly update main content titles, data, etc..
         }
 
-        //Set the itemSelectedListener for the NavigationView:
-        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        //Create a listener for when we select menu items from the NavigationView:
+        class NavigationViewMenuItemClickListener implements NavigationView.OnNavigationItemSelectedListener{
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
 
                 //Close the drawer:
                 drawerLayout.closeDrawers();
-
 
                 switch(item.getItemId()){
 
@@ -90,14 +96,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_menu_item1:
                         Toast.makeText(MainActivity.this, "Clicked menu item 1", Toast.LENGTH_SHORT).show();
                         break;
-
                     case R.id.nav_menu_item2:
                         Toast.makeText(MainActivity.this, "Clicked menu item 2", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_sub_menu_item_1:
                         Toast.makeText(MainActivity.this, "Clicked sub menu item 1", Toast.LENGTH_SHORT).show();
                         break;
-
                     //---------tmp-------------
 
                     default:
@@ -109,10 +113,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 return true;
-
-
             }
-        });
+        }
+
+        //Add the listener to the NavigationView: (by instantiating the inner-class above, where we defined it)
+        navView.setNavigationItemSelectedListener(new NavigationViewMenuItemClickListener());
 
         //Initialize DrawerLayout
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -161,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
          *
          * NOTE: Will have to tag any created fragments and then get a reference to them here.
          */
-
     }
 
     @Override
@@ -200,7 +204,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Clicked on toolbar_item_2", Toast.LENGTH_SHORT).show();
                 break;
             //---------tmp-------------:
-
 
             default:
 
